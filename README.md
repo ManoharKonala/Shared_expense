@@ -50,9 +50,12 @@ The application comes with a seed script (`backend/app/seed.py`) that sets up a 
 **Passwords:** Their first name in lowercase (e.g., `aisha`, `rohan`).
 
 ## Deployment URLs
-- **Frontend:** (To be deployed via Vercel/Netlify)
-- **Backend API:** (To be deployed via Render/Railway)
-- **Database:** (To be hosted on Supabase/Railway)
+- **Frontend:** https://frontend-theta-hazel-etfhct5kyn.vercel.app
+- **Backend API:** https://backend-production-9be8.up.railway.app
+- **Database:** Hosted on Railway (PostgreSQL)
+
+## AI Used
+For the development of this application, I utilized an advanced Agentic Coding Assistant powered by Google Gemini. The AI acted as a primary development collaborator, specifically assisting with setting up boilerplate code, accelerating frontend component creation with Tailwind, and scaffolding the FastAPI routing. As required by the assignment, I reviewed and take full responsibility for every line of code submitted. For detailed prompts and debugging sessions (including where the AI failed and how it was fixed), please see the `AI_USAGE.md` file.
 
 ## Environment Variables
 Create a `.env` file in the root directory:
@@ -81,4 +84,4 @@ The project includes a robust anomaly detection pipeline to handle the messy `ex
 ## Documentation
 - `SCOPE.md`: Project requirements and core constraints.
 - `DECISIONS.md`: Architectural decisions and trade-offs.
-- `AI_USAGE.md`: Reflection on AI usage and limitations.
+- `AI_USAGE.md`: Detailed reflection on AI usage, key prompts, and failure cases.

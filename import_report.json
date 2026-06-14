@@ -1,0 +1,363 @@
+[
+  {
+    "row_number": 6,
+    "raw_row": {
+      "date": "2026-02-08",
+      "description": "dinner - marina bites",
+      "paid_by": "Dev",
+      "amount": "3200",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Dev",
+      "split_details": "",
+      "notes": "",
+      "_row_number": 6
+    },
+    "anomaly_type": "DUPLICATE_ENTRY",
+    "description": "Duplicate of row 5: same date '2026-02-08', amount '3200' and similar description 'dinner - marina bites'",
+    "suggested_action": "Suggest keeping row 5 and deleting this row. Approve deletion?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 11,
+    "raw_row": {
+      "date": "2026-02-18",
+      "description": "Groceries DMart",
+      "paid_by": "Priya S",
+      "amount": "1875",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Meera",
+      "split_details": "",
+      "notes": "",
+      "_row_number": 11
+    },
+    "anomaly_type": "MEMBER_NOT_IN_GROUP",
+    "description": "'Priya S' is not a group member. Did you mean 'Priya'? (Levenshtein distance: 2)",
+    "suggested_action": "Suggest mapping 'Priya S' \u2192 'Priya'. Approve fix?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 12,
+    "raw_row": {
+      "date": "2026-02-20",
+      "description": "Aisha birthday cake",
+      "paid_by": "Rohan",
+      "amount": "1500",
+      "currency": "INR",
+      "split_type": "unequal",
+      "split_with": "Rohan;Priya;Meera",
+      "split_details": "Rohan 700; Priya 400; Meera 400",
+      "notes": "Aisha not charged obviously",
+      "_row_number": 12
+    },
+    "anomaly_type": "UNKNOWN_SPLIT_TYPE",
+    "description": "Split type 'unequal' is not recognized. Valid types: equal, exact, percentage, shares.",
+    "suggested_action": "Suggest defaulting to 'equal' split. Approve?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 13,
+    "raw_row": {
+      "date": "2026-02-22",
+      "description": "House cleaning supplies",
+      "paid_by": "",
+      "amount": "780",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Meera",
+      "split_details": "",
+      "notes": "can't remember who paid",
+      "_row_number": 13
+    },
+    "anomaly_type": "MISSING_REQUIRED_FIELD",
+    "description": "Missing required field(s): paid_by. Row cannot be imported as-is.",
+    "suggested_action": "Row is non-importable. Please provide values manually or skip this row.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 14,
+    "raw_row": {
+      "date": "2026-02-25",
+      "description": "Rohan paid Aisha back",
+      "paid_by": "Rohan",
+      "amount": "5000",
+      "currency": "INR",
+      "split_type": "",
+      "split_with": "Aisha",
+      "split_details": "",
+      "notes": "this is a settlement not an expense??",
+      "_row_number": 14
+    },
+    "anomaly_type": "SETTLEMENT_AS_EXPENSE",
+    "description": "Description 'Rohan paid Aisha back' suggests this is a settlement/payment, not an expense.",
+    "suggested_action": "Suggest converting to a Settlement record instead of an expense. Approve conversion?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 15,
+    "raw_row": {
+      "date": "2026-02-28",
+      "description": "Pizza Friday",
+      "paid_by": "Aisha",
+      "amount": "1440",
+      "currency": "INR",
+      "split_type": "percentage",
+      "split_with": "Aisha;Rohan;Priya;Meera",
+      "split_details": "Aisha 30%; Rohan 30%; Priya 30%; Meera 20%",
+      "notes": "percentages might be off",
+      "_row_number": 15
+    },
+    "anomaly_type": "SPLIT_DOES_NOT_SUM",
+    "description": "Percentages sum to 110%, not 100%. Discrepancy: -10%",
+    "suggested_action": "Suggest auto-adjusting the largest share to make it balance. Approve?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 22,
+    "raw_row": {
+      "date": "10/03/2026",
+      "description": "Scooter rentals",
+      "paid_by": "Priya",
+      "amount": "3600",
+      "currency": "INR",
+      "split_type": "share",
+      "split_with": "Aisha;Rohan;Priya;Dev",
+      "split_details": "Aisha 1; Rohan 2; Priya 1; Dev 2",
+      "notes": "Rohan and Dev took the bigger ones",
+      "_row_number": 22
+    },
+    "anomaly_type": "UNKNOWN_SPLIT_TYPE",
+    "description": "Split type 'share' is not recognized. Valid types: equal, exact, percentage, shares.",
+    "suggested_action": "Suggest defaulting to 'equal' split. Approve?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 23,
+    "raw_row": {
+      "date": "11/03/2026",
+      "description": "Parasailing",
+      "paid_by": "Dev",
+      "amount": "150",
+      "currency": "USD",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Dev;Dev's friend Kabir",
+      "split_details": "",
+      "notes": "Kabir joined for the day",
+      "_row_number": 23
+    },
+    "anomaly_type": "MEMBER_NOT_IN_GROUP",
+    "description": "'Dev's friend Kabir' is not a group member and no close match found.",
+    "suggested_action": "Cannot auto-fix. Please manually assign a member or skip this row.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 25,
+    "raw_row": {
+      "date": "11/03/2026",
+      "description": "Thalassa dinner",
+      "paid_by": "Rohan",
+      "amount": "2450",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Dev",
+      "split_details": "",
+      "notes": "Aisha also logged this I think hers is wrong",
+      "_row_number": 25
+    },
+    "anomaly_type": "INCONSISTENT_DUPLICATE",
+    "description": "Same event similar to 'Dinner at Thalassa' on 11/03/2026 logged with different amounts: 2400 vs 2450",
+    "suggested_action": "Review both entries side by side and pick the correct value, or enter a new one.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 26,
+    "raw_row": {
+      "date": "12/03/2026",
+      "description": "Parasailing refund",
+      "paid_by": "Dev",
+      "amount": "-30",
+      "currency": "USD",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Dev",
+      "split_details": "",
+      "notes": "one slot got cancelled",
+      "_row_number": 26
+    },
+    "anomaly_type": "NEGATIVE_AMOUNT",
+    "description": "Amount -30 is negative. This will be treated as a refund.",
+    "suggested_action": "Suggest flipping sign to positive and recording as a credit/refund. Approve?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 27,
+    "raw_row": {
+      "date": "Mar 14",
+      "description": "Airport cab",
+      "paid_by": "rohan ",
+      "amount": "1100",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Dev",
+      "split_details": "",
+      "notes": "",
+      "_row_number": 27
+    },
+    "anomaly_type": "INVALID_DATE_FORMAT",
+    "description": "Cannot parse date 'Mar 14'. Tried formats: YYYY-MM-DD, DD/MM/YYYY, MM-DD-YYYY, and others.",
+    "suggested_action": "Please provide the date in YYYY-MM-DD format.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 28,
+    "raw_row": {
+      "date": "15/03/2026",
+      "description": "Groceries DMart",
+      "paid_by": "Priya",
+      "amount": "2105",
+      "currency": "",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Meera",
+      "split_details": "",
+      "notes": "forgot to set currency",
+      "_row_number": 28
+    },
+    "anomaly_type": "CURRENCY_MISMATCH",
+    "description": "Currency field is empty. Cannot determine if amount '2105' is in INR, USD, or another currency.",
+    "suggested_action": "Suggest defaulting to INR. Please confirm the correct currency.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 31,
+    "raw_row": {
+      "date": "22/03/2026",
+      "description": "Dinner order Swiggy",
+      "paid_by": "Priya",
+      "amount": "0",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Meera",
+      "split_details": "",
+      "notes": "counted twice earlier - fixing later",
+      "_row_number": 31
+    },
+    "anomaly_type": "ZERO_AMOUNT",
+    "description": "Amount is 0 \u2014 this is likely a placeholder row.",
+    "suggested_action": "Suggest skipping this row. It will not be imported.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 32,
+    "raw_row": {
+      "date": "25/03/2026",
+      "description": "Weekend brunch",
+      "paid_by": "Meera",
+      "amount": "2200",
+      "currency": "INR",
+      "split_type": "percentage",
+      "split_with": "Aisha;Rohan;Priya;Meera",
+      "split_details": "Aisha 30%; Rohan 30%; Priya 30%; Meera 20%",
+      "notes": "",
+      "_row_number": 32
+    },
+    "anomaly_type": "SPLIT_DOES_NOT_SUM",
+    "description": "Percentages sum to 110%, not 100%. Discrepancy: -10%",
+    "suggested_action": "Suggest auto-adjusting the largest share to make it balance. Approve?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 35,
+    "raw_row": {
+      "date": "2026-04-01",
+      "description": "April rent",
+      "paid_by": "Aisha",
+      "amount": "48000",
+      "currency": "INR",
+      "split_type": "share",
+      "split_with": "Aisha;Rohan;Priya",
+      "split_details": "Aisha 2; Rohan 1; Priya 1",
+      "notes": "Aisha took Meera's room too",
+      "_row_number": 35
+    },
+    "anomaly_type": "UNKNOWN_SPLIT_TYPE",
+    "description": "Split type 'share' is not recognized. Valid types: equal, exact, percentage, shares.",
+    "suggested_action": "Suggest defaulting to 'equal' split. Approve?",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 36,
+    "raw_row": {
+      "date": "2026-04-02",
+      "description": "Groceries BigBasket",
+      "paid_by": "Priya",
+      "amount": "2640",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Meera",
+      "split_details": "",
+      "notes": "oops Meera still in the group list",
+      "_row_number": 36
+    },
+    "anomaly_type": "DATE_OUT_OF_MEMBERSHIP",
+    "description": "Meera left on 2026-03-31 but expense is dated 2026-04-02. They were no longer a member.",
+    "suggested_action": "Suggest excluding Meera from the split and redistributing equally.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 38,
+    "raw_row": {
+      "date": "2026-04-08",
+      "description": "Sam deposit share",
+      "paid_by": "Sam",
+      "amount": "15000",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha",
+      "split_details": "",
+      "notes": "Sam moving in! paid Aisha his deposit",
+      "_row_number": 38
+    },
+    "anomaly_type": "DATE_OUT_OF_MEMBERSHIP",
+    "description": "Sam joined on 2026-04-15 but expense is dated 2026-04-08. They weren't a member yet.",
+    "suggested_action": "Suggest excluding Sam from the split and redistributing equally.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 39,
+    "raw_row": {
+      "date": "2026-04-10",
+      "description": "Housewarming drinks",
+      "paid_by": "Sam",
+      "amount": "3100",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Sam",
+      "split_details": "",
+      "notes": "",
+      "_row_number": 39
+    },
+    "anomaly_type": "DATE_OUT_OF_MEMBERSHIP",
+    "description": "Sam joined on 2026-04-15 but expense is dated 2026-04-10. They weren't a member yet.",
+    "suggested_action": "Suggest excluding Sam from the split and redistributing equally.",
+    "user_decision": "pending"
+  },
+  {
+    "row_number": 40,
+    "raw_row": {
+      "date": "2026-04-12",
+      "description": "Electricity Apr",
+      "paid_by": "Aisha",
+      "amount": "1380",
+      "currency": "INR",
+      "split_type": "equal",
+      "split_with": "Aisha;Rohan;Priya;Sam",
+      "split_details": "",
+      "notes": "",
+      "_row_number": 40
+    },
+    "anomaly_type": "DATE_OUT_OF_MEMBERSHIP",
+    "description": "Sam joined on 2026-04-15 but expense is dated 2026-04-12. They weren't a member yet.",
+    "suggested_action": "Suggest excluding Sam from the split and redistributing equally.",
+    "user_decision": "pending"
+  }
+]
